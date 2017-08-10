@@ -134,6 +134,7 @@ public class BaseTest {
         stat = zk.exists(path, true);
         if(stat == null){
             System.out.println("创建节点：" + path);
+//            zk.create(path, "123".getBytes(), ZooDefs.Ids.ANYONE_ID_UNSAFE, CreateMode.PERSISTENT);
             zk.create(path, "123".getBytes(), acls, CreateMode.PERSISTENT);    
         }
         
